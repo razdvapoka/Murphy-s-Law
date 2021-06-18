@@ -11,8 +11,10 @@ var gifStatuses = options.map((o) => false);
 
 function preloadGifs() {
   options.forEach(function (option, optionIndex) {
+    console.log("load", option);
     var img = new Image();
     img.onload = function () {
+      console.log("loaded", optionIndex);
       gifStatuses[optionIndex] = true;
       updateDropButton();
     };
@@ -26,6 +28,7 @@ var dropButton = document.querySelector(".drop-button");
 
 function updateDropButton() {
   if (gifStatuses.every((status) => status)) {
+    console.log("enable drop button");
     dropButton.disabled = false;
   }
 }
