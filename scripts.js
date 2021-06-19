@@ -7,7 +7,8 @@ var options = [
   },
 ];
 
-var gifStatuses = options.map((o) => false);
+var gifStatuses = options.map(() => false);
+console.log(gifStatuses);
 
 function preloadGifs() {
   options.forEach(function (option, optionIndex) {

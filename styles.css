@@ -50,8 +50,14 @@ body {
   font-size: 40px;
   align-content: center;
   background-color: white;
+  transition: background-color 0.2s ease;
   border-color: transparent;
   font-family: Suisse Int\'l Book, Suisse Int\'l;
+  cursor: pointer;
+}
+
+.drop-button:hover {
+  background-color: aqua;
 }
 
 .drop-button:disabled {
